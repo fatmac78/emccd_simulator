@@ -21,7 +21,7 @@ pip install -r requirements.txt
 
 ## Usage
 
-An example of the usage of the library may be found in the included test case.  The test may be run as follow:
+An example of the using of the library to simulate on ainput image stack through the simulator may be found here:
 
 ```python
 from electron_multiplier import ElectronMultiplier
@@ -36,7 +36,7 @@ prob_cic = 0.01
 readout_mu = 200
 readout_sigma = 15
 
-# Generate a test input image stack of 100 50x50 frames, 1 photon in each (100k pixels)
+# Generate a test input image stack of 100 50x50 frames, 1 photon in each (250k input photons)
 input_image_stack=np.full((100, 50, 50), 1)   
 
 
@@ -58,4 +58,8 @@ The output histogram produced by this may be visualised, where the multiplicativ
 plt.hist(output_pixels, bins='auto')
 plt.show()
 ```
+
+![plot](./images/example_100gain_sim.png)
+
+The above simulation method `simulate_stack_spark` flattens the data in order to speed up the simulation, returning flattened output pixel data.  In order to recover output frames, a slower non-parallelized `image_shift_out` method may be used that simulates individual frames passing through the EMCCD 
 
