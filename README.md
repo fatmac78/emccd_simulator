@@ -61,5 +61,5 @@ plt.show()
 
 ![plot](./images/example_100gain_sim.png)
 
-The above simulation method `simulate_stack_spark` flattens the data in order to speed up the simulation, returning flattened output pixel data.  In order to recover output frames, a slower non-parallelized `image_shift_out` method may be used that simulates individual frames passing through the EMCCD 
+The above simulation method `simulate_stack_spark` flattens the data in order to speed up the simulation, returning flattened output pixel data.  If the format is output frames is required, a slower non-parallelized `image_shift_out` method may be used that simulates individual frames passing through the EMCCD 
 
