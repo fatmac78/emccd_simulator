@@ -35,14 +35,12 @@ em_gain = 100
 prob_cic = 0.01
 readout_mu = 200
 readout_sigma = 15
+random_seed = 1234
 
 # Generate a test input image stack of 100 50x50 frames, 1 photon in each (250k input photons)
 input_image_stack=np.full((100, 50, 50), 1)   
 
-
-random_seed = 1234
-
-conf = (SparkConf())
+conf = (SparkConf()) # Configure your Spark environment here as nessessary
 sc = SparkContext(conf=conf)
 
 emccd=ElectronMultiplier(em_stages, em_gain, prob_cic, random_seed, 
