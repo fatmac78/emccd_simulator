@@ -21,7 +21,7 @@ pip install -r requirements.txt
 
 ## Usage
 
-An example of the using of the library to simulate on ainput image stack through the simulator may be found here:
+An example of the using of the library to simulate an stack going of input images going through the EMCCD may be found here:
 
 ```python
 from electron_multiplier import ElectronMultiplier
@@ -32,7 +32,7 @@ from matplotlib import pyplot as plt
 # EMCCD parameters
 em_stages = 200
 em_gain = 100
-prob_cic = 0.01
+prob_cic = 0.01  
 readout_mu = 200
 readout_sigma = 15
 random_seed = 1234
