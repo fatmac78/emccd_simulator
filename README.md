@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The library is used to simulate both the serial register and readout noise of an EMCCD.  The simulation of the serial register includes both the multiplicative mechanism and also clock induced charge.  The output part of the add bias and Gaussian noise. Large number of frames/pixels may be simulated through the register, as it is implemented using Apache Spark
+The library is used to simulate both the serial register and readout noise of an EMCCD.  The simulation of the serial register includes both the multiplicative mechanism and also clock induced charge.  The output part of the add bias and Gaussian noise. Large number of frames/pixels may be simulated through the register, as some of the functions are implemented using Apache Spark
 
 
 ## License
